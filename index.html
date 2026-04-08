@@ -10,7 +10,7 @@
   <div class="container">
     <!-- Menu Awal - 2 Pilihan Kartu -->
     <div id="menuAwal" class="menu-awal active">
-      <h1 class="title">Letsgoww Kita Pilih!</h1>
+      <h1 class="title"> </h1>
       <div class="card-selection">
         <!-- Kartu Kiri - Minuman -->
         <div class="selection-card" id="cardMinuman" data-category="minuman">
@@ -32,7 +32,12 @@
 
     <!-- Area Shuffle -->
     <div id="shuffleArea" class="shuffle-area">
-      <h2 class="shuffle-title">SHUFFLING...</h2>
+
+  <!-- 🎥 VIDEO BACKGROUND SHUFFLE -->
+  <video id="shuffleVideo" autoplay muted loop playsinline>
+    <source src="https://res.cloudinary.com/docfotblf/video/upload/q_auto/f_auto/v1775669317/Firefly_buat_semua_object_bergerak_floating_secara_slow_motion_972890_wzdl29.mp4" type="video/mp4">
+  </video>
+      <h2 class="shuffle-title"> </h2>
       <div class="deck-container">
         <div class="card-deck" id="cardDeck">
           <!-- Kartu akan di-generate via JS -->
@@ -67,8 +72,6 @@
   <!-- Electric Particles Container -->
   <div class="particles-container" id="particlesContainer"></div>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
