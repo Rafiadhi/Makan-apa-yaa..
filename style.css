@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   /* Ganti URL dengan gambar background kamu */
-  background: url('https://i.imgur.com/ug0DSAl.png') no-repeat center center fixed;
+  background: url('https://i.imgur.com/foMsCh2.jpeg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Montserrat', black;
   overflow: hidden;
@@ -89,7 +89,8 @@ body {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  background: #ffffff; /* 🔥 TAMBAHAN */
+  box-shadow: 2px 3px 1px 3px rgba(76, 70, 61, 0.65);
 }
 
 .selection-card .card-image {
@@ -202,7 +203,8 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  background: #ffffff; /* 🔥 TAMBAHAN */
+  box-shadow: 2px 1px 1px 1px rgba(76, 70, 61, 0.65);
   transition: all 0.15s ease-out;
   backface-visibility: hidden;
 }
@@ -252,6 +254,61 @@ body {
   0%, 100% { transform: translateX(0) rotate(0); }
   25% { transform: translateX(-3px) rotate(-0.5deg); }
   75% { transform: translateX(3px) rotate(0.5deg); }
+}
+#shuffleVideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  opacity: 0;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 🎬 animasi muncul dari tengah */
+.video-enter {
+  animation: videoZoomIn 0.6s ease-out forwards;
+}
+
+@keyframes videoZoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.2);
+    border-radius: 30%;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 0%;
+    opacity: 1;
+  }
+}
+
+/* 🎬 animasi keluar */
+.video-exit {
+  animation: videoZoomOut 0.5s ease-in forwards;
+}
+
+@keyframes videoZoomOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0;
+  }
 }
 
 /* ============ ELECTRIC EFFECT ============ */
@@ -376,7 +433,8 @@ body {
   backface-visibility: hidden;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  background: #ffffff; /* 🔥 TAMBAHAN */
+  box-shadow: 2px 3px 1px 3px rgba(76, 70, 61, 0.65);
 }
 
 .card-back img, .card-front img {
@@ -473,7 +531,7 @@ body {
   align-items: center;
   transition: all 0.3s ease;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 1px 1px 1px rgba(76, 70, 61, 0.65);
 }
 
 .btn-back:hover {
